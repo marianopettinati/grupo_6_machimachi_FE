@@ -7,6 +7,7 @@ function Header () {
         <header>
              <div>
                 <img src= { logo } alt="machimachi_logo" className="header-logo"/>
+                <p className="header-name"> D a s h b o a r d </p>
             </div>
         </header>
     )
