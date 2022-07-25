@@ -1,0 +1,9 @@
+header {
+    background-image: linear-gradient(to bottom,white, pink);
+    padding: 2em;
+    text-align: center;
+}
+
+.header-logo {
+    max-height: 2em;
+}
