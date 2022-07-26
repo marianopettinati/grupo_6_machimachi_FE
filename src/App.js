@@ -7,8 +7,8 @@ function App() {
     <div className="App">
       
         <Header/>
-        <Indicador/>
-        
+        <Indicador categoria="productos" total="Soy el lenght del array de productos que vengo de la API" />
+
     </div>
   );
 }

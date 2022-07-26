@@ -1,3 +1,24 @@
+.indicador-wraper {
+    width: 90vw;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: darkred;
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; */
+    justify-self: center;
+    align-items: center;
+    margin: 15px;
+    color: black;
+}
+
 h1 {
     color: darkred;
+    padding: 0.5em;
+}
+
+p {
+    padding: 0em 2em 2em;
+    font-weight: bold;
 }
