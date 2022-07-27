@@ -1,5 +1,5 @@
 import Header from './components/Header/Header';
-import QuantityProducts from './components/QuantityProducts/QuantityProducts';
+import Panel from './components/Panel/Panel';
 
 
 function App() {
@@ -8,7 +8,8 @@ function App() {
       
         <Header/>
         
-        <QuantityProducts />
+        <Panel Type='quantityProducts'/>
+        <Panel Type='quantityUsers'/>
     </div>
   );
 }
