@@ -1,8 +1,8 @@
 import React from "react"
-import logo from "../images/mm-logo-con-nombre.png"
+import logo from "../../images/mm-logo-con-nombre.png"
 import "./Header.css"
 
-function Header () {
+const Header = () => {
     return (
         <header>
              <div>
