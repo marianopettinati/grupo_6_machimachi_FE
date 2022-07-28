@@ -26,8 +26,10 @@ const Card = ({
     
     return (
         <S.Card>
+            <S.Icon>
+              {title && renderTitle()}
+            </S.Icon>
             <S.TextWrapper>
-                {title && renderTitle()}
                 {description && renderDescription()}
             </S.TextWrapper>
         </S.Card>

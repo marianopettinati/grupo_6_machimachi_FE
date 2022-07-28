@@ -30,10 +30,10 @@ const Panel = ({
 
     const renderDescription = () => {
         if(Type=='quantityProducts'){
-            return description = `La cantidad de productos en la web actualmente es de ${quantityProducts}`;
+            return description = ` ${quantityProducts}`;
         }
         if(Type=='quantityUsers'){
-            return description = `La cantidad de usuarios en la web actualmente es de ${quantityUsers}`;
+            return description = `${quantityUsers}`;
         }
     }
 
