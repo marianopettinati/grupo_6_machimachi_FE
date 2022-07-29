@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const PanelWrapper = styled.div`
+export const PanelWraper = styled.div`
     display: flex;
     flex-direction: column;
     border-radius: 8px;
@@ -8,7 +8,7 @@ export const PanelWrapper = styled.div`
     box-shadow: inset 0 0 0 1px darkred;
 `
 
-export const ChildrenWrapper = styled.div`
+export const ChildrenWraper = styled.div`
 
 `
 

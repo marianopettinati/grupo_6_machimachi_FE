@@ -1,16 +1,16 @@
 import React from "react";
-import * as S from "./PanelWrapper.styles";
+import * as S from "./PanelWraper.styles";
 
-const PanelWrapper = (
+const PanelWraper = ({
     Title,
     Children,
     Direction
-) => {
+}) => {
 
     const renderChildren = () => {
-        <S.ChildrenWrapper>
+        <S.ChildrenWraper>
             { Children }
-        </S.ChildrenWrapper>
+        </S.ChildrenWraper>
     }
 
     const renderTitle = () => {
@@ -20,11 +20,11 @@ const PanelWrapper = (
     }
 
     return (
-        <S.PanelWrapper>
+        <S.PanelWraper>
             { Title && renderTitle }
             { Children && renderChildren() }
-        </S.PanelWrapper>
+        </S.PanelWraper>
     )
 }
 
-export default PanelWrapper;
+export default PanelWraper;
