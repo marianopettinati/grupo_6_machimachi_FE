@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import * as S from "./Panel.styles.js";
 import Card from "../Card/Card";
+import PropTypes from 'prop-types';
 
 const Panel = ({
     Type
@@ -15,7 +16,7 @@ const Panel = ({
                 setQuantityProducts ([data.count])
             })
             .catch(err => console.log(err))
-    }, [] )
+    }, [])
 
     useEffect (() => {
         fetch("http://localhost:3000/user/api/users")
@@ -24,36 +25,34 @@ const Panel = ({
                 setQuantityUsers ([data.count])
             })
             .catch(err => console.log(err))
-    }, [] )
+    }, [])
     
-    let description;
 
-    const renderDescription = () => {
-        if(Type=='quantityProducts'){
-            return description = ` ${quantityProducts}`;
+    const renderInformation = () => {
+        if(Type==='quantityProducts'){
+            return {
+                title: `Cantidad de productos`, 
+                description: `${quantityProducts}`
+            };
         }
-        if(Type=='quantityUsers'){
-            return description = `${quantityUsers}`;
+        if(Type==='quantityUsers'){
+            return {
+                title: `Cantidad de usuarios`, 
+                description: `${quantityUsers}`
+            };
         }
     }
-
-    let title;
-    const renderTitle = () => {
-        if(Type=='quantityProducts'){
-            return title = `Productos`;
-        }
-        if(Type=='quantityUsers'){
-            return title = `Usuarios`;
-        }
-    }
-
     
 
     return (
         <S.Panel>
-            <Card title={renderTitle()} description={renderDescription()}/>        
+            <Card title={renderInformation().title} description={renderInformation().description}/>        
         </S.Panel>
     )
 };
-
+/*
+Panel.PropTypes = {
+    Type: PropTypes.oneOf['quantityProducts', 'quantityUsers'],
+}
+*/
 export default Panel;
