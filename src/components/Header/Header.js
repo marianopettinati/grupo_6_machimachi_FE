@@ -1,16 +1,25 @@
-import React from "react"
+import React from "react";
+import * as S from './Header.styles.js';
 import logo from "../../images/mm-logo-con-nombre.png"
-import "./Header.css"
+import logo2 from "../../images/logo2-machimachi.png"
 
-const Header = () => {
+const  Header = () => {
     return (
-        <header>
-             <div>
-                <img src= { logo } alt="machimachi_logo" className="header-logo"/>
-                <p className="header-name"> D a s h b o a r d </p>
-            </div>
-        </header>
-    )
+        <div>
+            <S.wrapper>
+                <S.logo2 src= { logo2 } alt="machimachi_logo2"/>
+                <S.logo src= { logo } alt="machimachi_logo"/>
+                <S.logo2 src= { logo2 } alt="machimachi_logo2"/>
+            </S.wrapper>
+
+            <S.dashboard> 
+                <p>  D a s h b o a r d </p>
+            </S.dashboard>
+        </div>
+      )
+    
 };
 
-export default Header
+
+
+export default Header;
