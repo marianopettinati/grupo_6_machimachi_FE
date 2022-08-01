@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Card = styled.div`
-    display: inline-flex;
+    display: flex;
     border-radius: 8px;
     background-image: linear-gradient(to right,white, rgb(252, 206, 214));
     box-shadow: inset 0 0 0 1px darkred;
@@ -12,7 +12,7 @@ export const CardTitle = styled.div`
 `;
 
 export const Title = styled.div`
-  min-width: 200px;
+  width: 200px;
   color: darkred;
   font-weight: bolder;
   justify-self: center;
@@ -23,13 +23,12 @@ export const Description = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 100px;
+  width: 100px;
   font-weight: bolder; 
   font-size: 40px;
   border-radius:0px 8px 8px 50px;
   background-color: darkred;
   color white;
-  padding: 0em 1em;
 `;
 
 //border-radius: 4px 8px 50px 50px;

@@ -8,15 +8,15 @@ const Panel = ({
 }) => {
     const [quantityProducts, setQuantityProducts] = useState([0]);
     const [quantityUsers, setQuantityUsers] = useState([0]);
-    const [categories, setCategories] = useState([0]);
+    const [quantitycategories, setquantityCategories] = useState([0]);
     const [lastUser, setLastUser] = useState([0]);
 
     useEffect (() => {
         fetch("http://localhost:3000/product/api/products")
             .then(response => response.json())
             .then(data => {
-                setQuantityProducts ([data.count]);
-                setCategories ([data.countByGenres.length])
+                setQuantityProducts([data.count]);
+                setquantityCategories([data.countByGenres.length])
             })
             .catch(err => console.log(err))
     }, [])
@@ -49,10 +49,10 @@ const Panel = ({
                 description: `${quantityUsers}`
             };
         }
-        if(Type==='categories'){
+        if(Type==='quantityCategories'){
             return {
                 title: `Categorías`, 
-                description: `${categories}`
+                description: `${quantitycategories}`
             };
         }
         if(Type==='lastUser'){
