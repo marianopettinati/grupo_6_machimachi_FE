@@ -10,13 +10,19 @@ const Panel = ({
     const [quantityUsers, setQuantityUsers] = useState([0]);
     const [quantitycategories, setquantityCategories] = useState([0]);
     const [lastUser, setLastUser] = useState([0]);
+    const [quantityGenreNiñas, setQuantityGenreNiñas] = useState([0]);
+    const [quantityGenreNiños, setQuantityGenreNiños] = useState([0]);
+    const [quantityProductSale, setQuantityProductSale] = useState([0]);
 
     useEffect (() => {
         fetch("http://localhost:3000/product/api/products")
             .then(response => response.json())
-            .then(data => {
+            .then(data => {                
                 setQuantityProducts([data.count]);
-                setquantityCategories([data.countByGenres.length])
+                setquantityCategories([data.countByGenres.length]);
+                setQuantityGenreNiñas([data.countByGenres[1].niñas]);
+                setQuantityGenreNiños([data.countByGenres[0].niños]);
+                setQuantityProductSale([data.countBySale]);
             })
             .catch(err => console.log(err))
     }, [])
@@ -59,6 +65,24 @@ const Panel = ({
             return {
                 title: `Último usuario creado`, 
                 description: `${lastUser}`
+            };
+        }
+        if(Type==='quantityGenreNiñas'){
+            return {
+                title: `Niñas`, 
+                description: `${quantityGenreNiñas}`
+            };
+        }
+        if(Type==='quantityGenreNiños'){
+            return {
+                title: `Niños`, 
+                description: `${quantityGenreNiños}`
+            };
+        }
+        if(Type==='quantityProductsSale'){
+            return {
+                title: `Con descuento`, 
+                description: `${quantityProductSale}`
             };
         }
     }

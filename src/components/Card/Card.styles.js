@@ -8,7 +8,8 @@ export const Card = styled.div`
 `
 //border-radius: 50px 8px 50px 50px;
 export const CardTitle = styled.div`
-  padding: 2em;
+  text-align: center;
+  padding: 2em 1em;
 `;
 
 export const Title = styled.div`
