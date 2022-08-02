@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 
-export const product = styled.li`
-    padding: 10px;
-    border: solid 1 px darkred;
-    border-radius: 8px;
+
+export const Product = styled.li`
+    padding: 0.5em;
+    list-style:none;
+    color: darkred;
+    text-aling: left;
 `
 
 export const Wrapper = styled.div`

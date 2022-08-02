@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 export const PanelWrapper = styled.div`
     display: flex;
     border-radius: 8px;
-    padding: 10px;
+    padding: 1em;
     margin: 20px;
     background-image: linear-gradient(to right,white, rgb(252, 206, 214));
     box-shadow: inset 0 0 0 1px darkred;
