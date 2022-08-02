@@ -1,7 +1,9 @@
 import Header from './components/Header/Header';
 import Panel from './components/Panel/Panel';
 import PanelWrapper from './components/PanelWrapper/PanelWrapper';
+import Detail from './components/ProductDetails/ProductDetails';
 import * as S from './App.styles';
+import './App.css'
 
 
 function App() {
@@ -11,16 +13,23 @@ function App() {
         <Header/>
         <S.Flex>
           <S.GrandViewport>
-            <PanelWrapper title='Cantidades'>
+            <PanelWrapper title='Métricas'>
               <Panel Type='quantityProducts'/>
               <Panel Type='quantityUsers'/>     
               <Panel Type='quantityCategories'/>  
             </PanelWrapper>
-            <PanelWrapper title='Total de productos por categoria'>
-                <Panel Type='quantityGenreNiñas'/>
-                <Panel Type='quantityGenreNiños'/>
-                <Panel Type='quantityProductsSale' />
+            <div className='bottom'>
+              <PanelWrapper title='Productos' direction={ 'column' }>
+                  <Detail/>
               </PanelWrapper> 
+              
+                <PanelWrapper title='Productos por categoria' direction={ 'column'}>
+                    <Panel Type='quantityGenreNiñas'/>
+                    <Panel Type='quantityGenreNiños'/>
+                    <Panel Type='quantityProductsSale' />
+                  </PanelWrapper> 
+                
+            </div>
           </S.GrandViewport>
           <S.SmallViewport>
             
