@@ -20,7 +20,6 @@ const LastProduct = () => {
             <S.ProductDetails>{`Precio: $${details.price}`}</S.ProductDetails>
             <S.ProductDetails>{`Descripción ${details.description}`}</S.ProductDetails>
             <S.ProductDetails>{`Genero: ${details.gender}`}</S.ProductDetails>
-            <S.ProductDetails>{`Detalles: ${details.description}`}</S.ProductDetails>
         </S.LastProduct>
     )
 }
