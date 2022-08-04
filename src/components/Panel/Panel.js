@@ -44,19 +44,19 @@ const Panel = ({
     const renderInformation = () => {
         if(Type==='quantityProducts'){
             return {
-                title: `Productos`, 
+                title: `Cantidad de productos`, 
                 description: `${quantityProducts}`
             };
         }
         if(Type==='quantityUsers'){
             return {
-                title: `Usuarios`, 
+                title: `Cantidad de usuarios`, 
                 description: `${quantityUsers}`
             };
         }
         if(Type==='quantityCategories'){
             return {
-                title: `Categorías`, 
+                title: `Cantidad de categorías`, 
                 description: `${quantitycategories}`
             };
         }
@@ -80,7 +80,7 @@ const Panel = ({
         }
         if(Type==='quantityProductsSale'){
             return {
-                title: `Con descuento`, 
+                title: `Cantidad de descuentos`, 
                 description: `${quantityProductSale}`
             };
         }
@@ -93,9 +93,5 @@ const Panel = ({
         </S.Panel>
     )
 };
-/*
-Panel.PropTypes = {
-    Type: PropTypes.oneOf['quantityProducts', 'quantityUsers'],
-}
-*/
+
 export default Panel;

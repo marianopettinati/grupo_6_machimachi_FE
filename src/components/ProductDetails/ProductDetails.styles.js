@@ -1,8 +1,13 @@
 import styled from 'styled-components';
 
+export const ProductDetail = styled.ol`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`
 
 export const Product = styled.li`
-    padding: 0.5em;
+    padding: 0.5em 0;
     list-style:none;
     color: darkred;
     text-aling: left;

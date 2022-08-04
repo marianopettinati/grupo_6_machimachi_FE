@@ -16,13 +16,13 @@ export const ChildrenWraper = styled.div`
     justify-content: center;
     flex-wrap: wrap;
     ${({ direction }) =>
-    direction == 'row' && 
+    direction === 'row' && 
         css`
             flex-direction: row;
         `}
 
     ${({ direction }) =>
-    direction == 'column' && 
+    direction === 'column' && 
         css`
             flex-direction: column;
         `}
@@ -32,6 +32,7 @@ export const ChildrenWraper = styled.div`
 export const Title = styled.h1`
     color: darkred;
     font-weight: bolder;
+    margin: 5px 0;
 `
 
 export const TitleWrapper = styled.div`

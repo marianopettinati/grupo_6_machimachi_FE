@@ -18,9 +18,9 @@ function ProductDetail () {
     }, [])
     
     return (
-        <ul>
+        <S.ProductDetail>
             { details.map((element, i) => <S.Product> {i+1}) { element } </S.Product>)}        
-        </ul>
+        </S.ProductDetail>
     )
 }
 

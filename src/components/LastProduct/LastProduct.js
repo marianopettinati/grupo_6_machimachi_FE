@@ -9,18 +9,19 @@ const LastProduct = () => {
             .then(response => response.json())
             .then(data => {                
                 let productIndex = data.products.length -1
-                setDetails(data.products[productIndex]);   
+                setDetails(data.products[productIndex]);                   
             })
             .catch(err => console.log(err))
     }, [])
     
     return (
-        <ul>
-            <S.ProductDetails> { details.name } </S.ProductDetails>
-            <S.ProductDetails> { details.price } </S.ProductDetails>
-            <S.ProductDetails> { details.description } </S.ProductDetails>
-            <S.ProductDetails> { details.gender } </S.ProductDetails>
-        </ul>
+        <S.LastProduct>
+            <S.ProductDetails>{`Nombre: ${details.name}`}</S.ProductDetails>
+            <S.ProductDetails>{`Precio: $${details.price}`}</S.ProductDetails>
+            <S.ProductDetails>{`Descripción ${details.description}`}</S.ProductDetails>
+            <S.ProductDetails>{`Genero: ${details.gender}`}</S.ProductDetails>
+            <S.ProductDetails>{`Detalles: console.log(${details})`}</S.ProductDetails>
+        </S.LastProduct>
     )
 }
 
