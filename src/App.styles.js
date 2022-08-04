@@ -5,12 +5,11 @@ export const GrandViewport = styled.div`
 `
 
 export const SmallViewport = styled.div`
-    width: 35%;
+    width: 25%;
 `
 
 export const Flex = styled.div`
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 `

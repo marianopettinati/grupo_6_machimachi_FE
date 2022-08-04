@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import * as S from "./Panel.styles.js";
 import Card from "../Card/Card";
-import PropTypes from 'prop-types';
 
 const Panel = ({
     Type
@@ -15,7 +14,7 @@ const Panel = ({
     const [quantityProductSale, setQuantityProductSale] = useState([0]);
 
     useEffect (() => {
-        fetch("http://localhost:3000/product/api/products")
+        fetch("http://localhost:3000/api/products")
             .then(response => response.json())
             .then(data => {                
                 setQuantityProducts([data.count]);
@@ -28,7 +27,7 @@ const Panel = ({
     }, [])
 
     useEffect (() => {
-        fetch("http://localhost:3000/user/api/users")
+        fetch("http://localhost:3000/api/users")
             .then(response => response.json())
             .then(data => {
                 setQuantityUsers ([data.count])

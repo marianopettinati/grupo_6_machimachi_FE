@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
-// import PropTypes from 'prop-types';
 import * as S from "./ProductDetails.styles";
 
-function Detail (props) {
-    const [details, setDetails] = useState(0);
+function ProductDetail () {
+    const [details, setDetails] = useState([]);
 
     useEffect (() => {
-        fetch("http://localhost:3000/product/api/products")
+        fetch("http://localhost:3000/api/products")
             .then(response => response.json())
             .then(data => {                
                 let productsArray = []
@@ -20,10 +19,9 @@ function Detail (props) {
     
     return (
         <ul>
-            {/* <S.Product> {details[0]} </S.Product> */}
             { details.map((element, i) => <S.Product> {i+1}) { element } </S.Product>)}        
         </ul>
     )
 }
 
-export default Detail;
+export default ProductDetail;

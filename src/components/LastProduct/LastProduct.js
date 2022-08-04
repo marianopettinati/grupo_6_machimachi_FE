@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from "react";
-// import PropTypes from 'prop-types';
 import * as S from "./LastProduct.styles";
 
-function LastProduct (props) {
+const LastProduct = () => {
     const [details, setDetails] = useState(0);
 
     useEffect (() => {
-        fetch("http://localhost:3000/product/api/products")
+        fetch("http://localhost:3000/api/products")
             .then(response => response.json())
             .then(data => {                
                 let productIndex = data.products.length -1
-                setDetails(data.products[productIndex]);       
+                setDetails(data.products[productIndex]);   
             })
             .catch(err => console.log(err))
     }, [])
